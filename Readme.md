@@ -16,8 +16,10 @@ Install-ADDSForest -DomainName cyber.com -InstallDNS
 * Need to change it's DNS server, it will reset it to it's loopback address after reset
 
 ```powershell
+# get interface interfaceIndex number
  Get-DnsClientServerAddress
- # get interface interfaceIndex number
+
+# set DNS using obtain interface index
  Set-DnsClientServerAddress -InterfaceIndex 12 -ServerAddresses ("10.0.0.1","10.0.0.2")
  ```
 
