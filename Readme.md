@@ -14,6 +14,7 @@ Install-ADDSForest -DomainName cyber.com -InstallDNS
 
 * Window Server will auto restart
 * Need to change it's DNS server, it will reset it to it's loopback address after reset
+* Set DC Server to PC DNS Server
 
 ```powershell
 # get interface interfaceIndex number
@@ -22,4 +23,13 @@ Install-ADDSForest -DomainName cyber.com -InstallDNS
 # set DNS using obtain interface index
  Set-DnsClientServerAddress -InterfaceIndex 12 -ServerAddresses ("10.0.0.1","10.0.0.2")
  ```
+
+
+ ## Add client PC in Active directory through Powershell
+
+ ```powershell
+ Add-Computer -DomainName egDomain.com -Restart
+ ```
+
+ * PC restart
 
