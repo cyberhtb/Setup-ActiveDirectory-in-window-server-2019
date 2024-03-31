@@ -1,15 +1,12 @@
-# Step by Step guide to setup AD through powershell
+# Step by Step guide to setup AD through PowerShell
 
-* Initial configuration using 'sconfig'
-	- computer name
-	- networking setting
+## Initial Configuration Using 'sconfig'
+- Computer Name
+- Networking Setting
 
-* How to guide installting Active directory using powershell
-'''shell
+## How to Guide Installing Active Directory Using PowerShell
 
-	start powershell
-	Install-WindowsFeature AD-Domain-Services -IncludeManagmentTools
-	Install-ADDSForest -DomainName cyber.com -InstallDNS
-
-'''
-
+```powershell
+start powershell
+Install-WindowsFeature AD-Domain-Services -IncludeManagmentTools
+Install-ADDSForest -DomainName cyber.com -InstallDNS
