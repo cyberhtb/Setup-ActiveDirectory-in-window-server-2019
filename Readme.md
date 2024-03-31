@@ -17,7 +17,7 @@ Install-ADDSForest -DomainName cyber.com -InstallDNS
 
 ```powershell
  Get-DnsClientServerAddress
- "get interface interfaceIndex number"
+ # get interface interfaceIndex number
  Set-DnsClientServerAddress -InterfaceIndex 12 -ServerAddresses ("10.0.0.1","10.0.0.2")
  ```
- 
+
